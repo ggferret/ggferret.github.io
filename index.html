@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathan Ferrel — Writings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Figtree:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: quiet, honest, personal — a young believer writing what he lived
+   IDEA: a dawn after a hard night; each piece is a page in a journal
+   PICTURE: layered dawn horizon over hills with a rising sun, full-bleed header
+   COLOUR and TYPE: deep indigo night, gold sun, white page; Newsreader for reading, Figtree for labels
+   LAYOUT: header scene, list of writings, then one calm reading column per piece */
+:root{color-scheme:light dark;
+  --bg:light-dark(#ffffff,#0f1428);
+  --ink:light-dark(#1a1d2b,#e9ebf5);
+  --soft:light-dark(#5b6075,#a4a9c2);
+  --line:light-dark(#e6e7ee,#262c48);
+  --night:#1d2a5c;--gold:#f2b544;--rose:#e98a6b;
+  --card:light-dark(#f6f7fb,#161c36)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Newsreader",Georgia,serif;overflow-x:clip}
+a{color:inherit}
+.hero{position:relative;background:var(--night);color:#fff;overflow:hidden}
+.hero svg{display:block;width:100%;height:clamp(220px,38vw,360px)}
+.hero .t{position:absolute;left:max(5vw,16px);top:clamp(22px,4vw,48px);right:16px}
+.hero h1{margin:0;font-size:clamp(34px,5vw,52px);line-height:1.05;font-weight:700;text-wrap:balance}
+.hero p{margin:8px 0 0;font:500 15px/1.4 "Figtree",sans-serif;color:#d7dcf5}
+.hero a.home{text-decoration:none}
+main{max-width:720px;margin:0 auto;padding:clamp(28px,4vw,56px) max(5vw,16px) 64px}
+.label{font:700 13px/1.3 "Figtree",sans-serif;color:var(--soft)}
+.list{list-style:none;margin:14px 0 0;padding:0}
+.list li{border-top:1px solid var(--line)}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list a{display:block;padding:20px 4px;text-decoration:none;min-height:44px}
+.list a:hover h2,.list a:focus-visible h2{color:var(--rose)}
+.list h2{margin:4px 0 6px;font-size:clamp(24px,3vw,30px);line-height:1.15;font-weight:600;transition:color .2s}
+.list p{margin:0;color:var(--soft)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+article h2{margin:6px 0 10px;font-size:clamp(32px,5vw,44px);line-height:1.08;font-weight:700;text-wrap:balance}
+article .meta{margin-bottom:28px}
+article p{margin:0 0 1.15em}
+article p:first-of-type::first-letter{float:left;font-size:3.4em;line-height:.85;padding:6px 8px 0 0;color:var(--rose);font-weight:700}
+blockquote{margin:0 0 1.15em;padding:2px 0 2px 20px;border-left:3px solid var(--gold);font-style:italic;color:var(--ink)}
+blockquote+p{margin-top:1.6em}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;font:700 15px "Figtree",sans-serif;text-decoration:none;color:var(--soft)}
+.back:hover{color:var(--ink)}
+.copy{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding-top:22px;border-top:1px solid var(--line)}
+button{font:700 15px "Figtree",sans-serif;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--night);color:#fff;cursor:pointer}
+:root[data-theme=dark] button{background:var(--gold);color:#1a1d2b}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) button{background:var(--gold);color:#1a1d2b}}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.msg{font:500 14px "Figtree",sans-serif;color:var(--soft)}
+footer{text-align:center;padding:28px 16px 40px;font:500 13px "Figtree",sans-serif;color:var(--soft);border-top:1px solid var(--line)}
+.sun{animation:rise 2.4s ease-out both}
+@keyframes rise{from{transform:translateY(40px);opacity:.2}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1d2a5c"/><stop offset=".55" stop-color="#4a3f7a"/><stop offset=".82" stop-color="#e98a6b"/><stop offset="1" stop-color="#f6c66e"/>
+      </linearGradient>
+      <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffe3a3" stop-opacity=".9"/><stop offset="1" stop-color="#ffe3a3" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1200" height="360" fill="url(#sky)"/>
+    <g fill="#fff" opacity=".7"><circle cx="140" cy="40" r="1.4"/><circle cx="420" cy="70" r="1"/><circle cx="610" cy="30" r="1.3"/><circle cx="1040" cy="60" r="1.2"/><circle cx="880" cy="24" r="1"/><circle cx="300" cy="110" r=".9"/></g>
+    <g class="sun"><circle cx="860" cy="300" r="140" fill="url(#glow)"/><circle cx="860" cy="300" r="62" fill="#f2b544"/></g>
+    <path d="M0 290 C180 250 320 270 470 285 S760 250 920 280 1110 270 1200 262 V360 H0Z" fill="#3a3466"/>
+    <path d="M0 320 C160 300 300 310 520 326 S860 300 1000 318 1150 312 1200 306 V360 H0Z" fill="#251f4a"/>
+    <path d="M0 345 C260 334 600 352 900 340 S1150 342 1200 338 V360 H0Z" fill="#141033"/>
+  </svg>
+  <div class="t">
+    <a class="home" href="#home"><h1>Nathan Ferrel</h1></a>
+    <p>Writings on faith, life, and the in-between</p>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<footer>© <span id="yr"></span> Nathan Ferrel</footer>
+
+<script>
+{
+const posts=[
+  {id:"a-christ-follower-period",title:"A Christ Follower, Period",date:"November 24, 2026",
+   blurb:"On the fight with lust, dealing with it aggressively, and refusing to let sin become your identity.",
+   body:[
+"The struggle with lust can be a rather difficult one. I have experienced different phases of this battle, including the season I am in right now. I have been both addicted to porn and stuck with a mind that was completely corrupted by lust. For a while now I have drifted away from porn, and recently the struggle has mostly been lustful thoughts, mainly at night and in the morning. Right now I am fixing my night and morning routines to be more Christ-focused.",
+"I want to get across two big points about this subject. The first is about the seriousness of this sin and eventually stopping, at least the porn part. The second is about how to handle the sin if you are in the middle of it.",
+"I taught my story with this in a lesson to a youth group, and here is part of what I told them:",
+"> “This lust and adult content problem quite literally wrecked my life. It destroyed my social ability, my confidence, and my motivation. It gave me brain fog and laziness all through school, from middle school to high school. In the winter of 2024 I was very broken. It was my worst stretch ever. I almost quit my job a few times. My lustful thoughts were getting really bad, and I was really down. I prayed a lot for God to take this away. So many nights I spent praying for it to go away. Every single Sunday, when we prayed by ourselves, I just kept praying: ‘Please let that night be the last time I fall into this.’",
+"> “Then I hit a breakthrough and went around nine months without watching anything. Then I fell down the rabbit hole again, but something was different this time. Now I am here, not really broken, but wanting to stop and give it up once and for all.",
+"> “That testimony does not change. The reason I went nine months without it was because I didn’t put it on my mind. My heart and mind were so focused on Jesus that I had zero desire to do any of that. I was so focused on Jesus that I wasn’t worried about it. The sin that absolutely destroyed me just wasn’t on my mind.",
+"> “I saw an Instagram reel that perfectly describes what happened to me. Now we’re going to play a game. What are you doing right now? You’re thinking about burgers, because you’re putting it on your mind. The more you put it on your mind, the more you’re going to think about it. The more you think, ‘Oh, I could mess up tonight,’ or ‘I’ve got to get rid of this sin,’ the more likely you are to do it. Especially for me, at night when you’re bored and winding down, you start thinking, ‘I can’t mess up,’ and then the temptation comes. Instead of focusing on this sin, focus on Jesus.”",
+"That is word for word what I taught my youth group. It still works, and I think it is the best way. I also said that it might happen differently for you. There is no formula. It is what you and the Spirit decide on.",
+"Please, please lock in to this next part, because it is important for my second point: you do have the willpower to stop this sin through the power of the Holy Spirit. As Philip Anthony Mitchell said, deal with it aggressively. This sin will absolutely kill you. Don’t surround yourself with videos on how to beat it; surround yourself with the Holy Spirit. Take advice from people and watch things, but do not surround yourself with it. Take away whatever distractions you have, and find the root cause and the chain of events that lead to it. Change your routine. And if you don’t want to because it’s too much of a pain, then you are the rich man who refuses to sell his possessions. This sin will absolutely wreck you if you do not quit.",
+"Now, with all of that said, I need you to take this next part very seriously, because out of context this message could be very harmful. I want to talk to the person who is deep in this sin and feels lost and broken. Like I said, this sin will absolutely wreck you, and I don’t want that to happen to you.",
+"Besides struggling with lust basically my entire life, there was one thing I never got right: I let this sin define me. As much as this sin will kill you, you can let it kill you a lot less. Unfortunately, in my experience, it has never been something I could turn off like a switch. So I understand that some of you may hear this message and, a week later, go back to watching stuff. And you will feel awful and ashamed. But you cannot be defined by it.",
+"That is what I let happen to myself. I would fall, and then I would feel shame and feel defined by it. In the back of my mind I called myself a Christ follower who struggles with lust, not a Christ follower, period. That mentality will kill you just as much as the lust will. When you let yourself become defined by your sin, you will shut down as a Christ follower and you will feel far from God.",
+"When you fall, do you cry and feel self-pity, or do you shake it off, get back up, and realize you need Jesus? This has been my biggest change from my first struggle with lust to now. I used to define myself by my sin and not by Christ. Now, as much as lust still hurts me, it hurts me half as much as it did, and the benefits have been huge. Before, when I fell, I felt far from Christ. Now, when I fall, I feel close to Christ. Not because I sinned, but because I got up and asked for forgiveness.",
+"But be careful, because God knows your heart, and if you don’t hate your sin, you will be far from Him. You must hate your sin and desperately want to turn from it. But the more you beat yourself up over it, the worse off you will be.",
+"Like I said, you need to pay attention and understand what I am saying. I cannot stress enough how much this sin will wreck you. But when you let it become your identity, you will feel so disconnected and lost. I hope that after this, you become a Christ follower, period, and not a Christ follower who struggles with lust."
+   ]},
+  {id:"panic-before-the-exam",title:"Panic Before the Exam",date:"November 24, 2026",
+   blurb:"On panic attacks, studying, and giving it to God when nothing else works.",
+   body:[
+"This won’t be a long one, but I have experienced panic attacks a few times now. They all have one common denominator, and that is the day before or the day of an exam. They are rough. You just start breathing, and there’s nothing you can really do. I take a long break from it and go back to studying, and then it starts again.",
+"I am trying to figure out what specifically is the cause, because I have studied countless other times. Even prayer and a guided meditation could not break it. I was like this for an hour where I literally could not function and was just freaking out. It’s tough, because as I am writing this I should be studying, but instead I need to focus on writing. I really don’t know why this happened, and even a firm foundation on Christ was not enough to stop it from happening in the moment.",
+"Like most things, there is not one easy solution that will get you to stop panic attacks. What I did do, after a lot of prayer, was give it to God. After a bunch of prayer and up-and-down emotions, I simply said, “God, I am going to give this to You.” And I did, and He took it.",
+"Even after I did that, I had zero motivation to study, but I was able to move on with my life. During that hour I couldn’t do anything else, because if I wasn’t studying I was going to feel bad about not studying. It was just a cycle.",
+"The only thing I can recommend is to spend time in prayer and with God while you’re having the panic attack, and figure it out from there. Ask God to guide you to where you need to go.",
+"Thankfully, I was able to lock in and study for a bit, while coming to the realization that I have hit my peak in math. It is okay to struggle with this stuff, and the only way to recover is through Christ.",
+"I am about to go take my exam. I should have studied harder, but my own thoughts got in the way. I will have to do a lot of prayer and reflecting on why this happened, but it did, and the worst thing I can do is dwell on it. God may even do a miracle, but I know the most important thing right now is that I am in His arms. And for the next exam, I will need prayer, and to give all my worries to God."
+   ]}
+];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const view=document.getElementById("view");
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+function home(){
+  view.innerHTML=`<div class="label">Writings</div><ul class="list">${posts.map(p=>`<li><a href="#${p.id}"><span class="label">${esc(p.date)}</span><h2>${esc(p.title)}</h2><p>${esc(p.blurb)}</p></a></li>`).join("")}</ul>`;
+}
+function post(p){
+  view.innerHTML=`<a class="back" href="#home">← All writings</a><article><h2>${esc(p.title)}</h2><div class="label meta">${esc(p.date)}</div>${p.body.map(t=>t.startsWith("> ")?`<blockquote>${esc(t.slice(2))}</blockquote>`:`<p>${esc(t)}</p>`).join("")}</article>
+  <div class="copy"><button id="cp" type="button">Copy text</button><span class="msg" id="msg"></span></div>`;
+  document.getElementById("cp").addEventListener("click",async()=>{
+    const m=document.getElementById("msg");
+    try{await navigator.clipboard.writeText(p.title+"\n\n"+p.body.join("\n\n"));m.textContent="Copied."}
+    catch(e){m.textContent="Couldn’t copy here. Select the text instead."}
+  });
+}
+function route(){
+  const id=location.hash.slice(1);
+  const p=posts.find(x=>x.id===id);
+  p?post(p):home();
+  window.scrollTo(0,p?document.querySelector(".hero").offsetHeight:0);
+}
+window.addEventListener("hashchange",route);
+route();
+}
+</script>
+</body>
+</html>
